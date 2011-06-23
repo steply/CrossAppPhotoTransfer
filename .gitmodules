@@ -1,0 +1,6 @@
+[submodule "Third Party/SDWebImage"]
+	path = Third Party/SDWebImage
+	url = git://github.com/mystcolor/SDWebImage.git
+[submodule "Third Party/SBJSON-library"]
+	path = Third Party/SBJSON-library
+	url = git://github.com/mystcolor/SBJSON-library.git
