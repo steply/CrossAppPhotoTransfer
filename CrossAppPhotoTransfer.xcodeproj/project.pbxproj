@@ -10,7 +10,7 @@
 		1AC3C4DF13B2FBA7004D040F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC3C4DE13B2FBA7004D040F /* Foundation.framework */; };
 		1AC3C50613B2FBB1004D040F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC3C4DE13B2FBA7004D040F /* Foundation.framework */; };
 		1AC3C59613B30D89004D040F /* app_icon_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53713B30D89004D040F /* app_icon_placeholder.png */; };
-		1AC3C59713B30D89004D040F /* default-exportlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53813B30D89004D040F /* default-exportlist.json */; };
+		1AC3C59713B30D89004D040F /* default_transfer_apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53813B30D89004D040F /* default_transfer_apps.json */; };
 		1AC3C59813B30D89004D040F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53913B30D89004D040F /* InfoPlist.strings */; };
 		1AC3C59913B30D89004D040F /* exportphotos-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53B13B30D89004D040F /* exportphotos-Info.plist */; };
 		1AC3C59A13B30D89004D040F /* exportphotosAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C53E13B30D89004D040F /* exportphotosAppDelegate.m */; };
@@ -81,7 +81,7 @@
 		1AC3C53413B30D2B004D040F /* NSURL+CAPTURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+CAPTURLHelper.h"; sourceTree = "<group>"; };
 		1AC3C53513B30D2B004D040F /* NSURL+CAPTURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CAPTURLHelper.m"; sourceTree = "<group>"; };
 		1AC3C53713B30D89004D040F /* app_icon_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_placeholder.png; sourceTree = "<group>"; };
-		1AC3C53813B30D89004D040F /* default-exportlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "default-exportlist.json"; sourceTree = "<group>"; };
+		1AC3C53813B30D89004D040F /* default_transfer_apps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_transfer_apps.json; sourceTree = "<group>"; };
 		1AC3C53A13B30D89004D040F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AC3C53B13B30D89004D040F /* exportphotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "exportphotos-Info.plist"; sourceTree = "<group>"; };
 		1AC3C53C13B30D89004D040F /* exportphotos-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exportphotos-Prefix.pch"; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		1AC3C5F113B30ECD004D040F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1AC3C53813B30D89004D040F /* default-exportlist.json */,
+				1AC3C53813B30D89004D040F /* default_transfer_apps.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -451,7 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC3C59613B30D89004D040F /* app_icon_placeholder.png in Resources */,
-				1AC3C59713B30D89004D040F /* default-exportlist.json in Resources */,
+				1AC3C59713B30D89004D040F /* default_transfer_apps.json in Resources */,
 				1AC3C59813B30D89004D040F /* InfoPlist.strings in Resources */,
 				1AC3C59913B30D89004D040F /* exportphotos-Info.plist in Resources */,
 				1AC3C59C13B30D89004D040F /* ExportPhotoViewController.xib in Resources */,
@@ -705,6 +705,7 @@
 				1AC3C4FE13B2FBA7004D040F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AC3C52213B2FBB2004D040F /* Build configuration list for PBXNativeTarget "importphotos" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +714,7 @@
 				1AC3C52413B2FBB2004D040F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
