@@ -61,13 +61,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A64F4C713B86A9C00DC0826 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1A05DB2713B8747300944833 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1A64F4C913B86C5400DC0826 /* app_icon_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_placeholder.png; sourceTree = "<group>"; };
 		1A64F4CA13B86C5400DC0826 /* default_transfer_apps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_transfer_apps.json; sourceTree = "<group>"; };
 		1A64F4CB13B86C5400DC0826 /* gray_dash_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_dash_40.png; sourceTree = "<group>"; };
 		1A64F4CC13B86C5400DC0826 /* gray_dash_40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_dash_40@2x.png"; sourceTree = "<group>"; };
 		1A64F4D113B86CC700DC0826 /* CAPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPT.h; sourceTree = "<group>"; };
-		1A64F4D313B8716B00DC0826 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1AC3C4D813B2FBA7004D040F /* exportphotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exportphotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC3C4DE13B2FBA7004D040F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AC3C50313B2FBB1004D040F /* importphotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = importphotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +222,7 @@
 		1AC3C52513B30D2B004D040F /* source */ = {
 			isa = PBXGroup;
 			children = (
-				1A64F4C713B86A9C00DC0826 /* LICENSE */,
-				1A64F4D313B8716B00DC0826 /* README.md */,
+				1A05DB2713B8747300944833 /* LICENSE */,
 				1A64F4D113B86CC700DC0826 /* CAPT.h */,
 				1AC3C52613B30D2B004D040F /* CAPTApp+TransferPhoto.h */,
 				1AC3C52713B30D2B004D040F /* CAPTApp+TransferPhoto.m */,
