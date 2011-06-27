@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CAPTHandler+TransferPhoto.h"
-#import "CAPTHandlerDelegate.h"
+#import "CAPT.h"
 
 @interface ImportPhotosViewController : UIViewController <CAPTHandlerDelegate> {
     

@@ -8,9 +8,7 @@
 
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "ExportPhotoViewController.h"
-#import "CAPTAppExportList.h"
-#import "CAPTTransferPhotoTableViewController.h"
-#import "CAPTApp+TransferPhoto.h"
+#import "CAPT.h"
 
 @interface ExportPhotoViewController ()
 @property (nonatomic, retain) NSDictionary *metaData;

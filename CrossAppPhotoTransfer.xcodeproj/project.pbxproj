@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A64F4CD13B86C5400DC0826 /* app_icon_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A64F4C913B86C5400DC0826 /* app_icon_placeholder.png */; };
+		1A64F4CE13B86C5400DC0826 /* default_transfer_apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A64F4CA13B86C5400DC0826 /* default_transfer_apps.json */; };
+		1A64F4CF13B86C5400DC0826 /* gray_dash_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A64F4CB13B86C5400DC0826 /* gray_dash_40.png */; };
+		1A64F4D013B86C5400DC0826 /* gray_dash_40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A64F4CC13B86C5400DC0826 /* gray_dash_40@2x.png */; };
 		1AC3C4DF13B2FBA7004D040F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC3C4DE13B2FBA7004D040F /* Foundation.framework */; };
 		1AC3C50613B2FBB1004D040F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC3C4DE13B2FBA7004D040F /* Foundation.framework */; };
-		1AC3C59613B30D89004D040F /* app_icon_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53713B30D89004D040F /* app_icon_placeholder.png */; };
-		1AC3C59713B30D89004D040F /* default_transfer_apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53813B30D89004D040F /* default_transfer_apps.json */; };
 		1AC3C59813B30D89004D040F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53913B30D89004D040F /* InfoPlist.strings */; };
 		1AC3C59913B30D89004D040F /* exportphotos-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C53B13B30D89004D040F /* exportphotos-Info.plist */; };
 		1AC3C59A13B30D89004D040F /* exportphotosAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C53E13B30D89004D040F /* exportphotosAppDelegate.m */; };
 		1AC3C59B13B30D89004D040F /* ExportPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C54013B30D89004D040F /* ExportPhotoViewController.m */; };
 		1AC3C59C13B30D89004D040F /* ExportPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C54113B30D89004D040F /* ExportPhotoViewController.xib */; };
-		1AC3C59D13B30D89004D040F /* gray_dash_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C54213B30D89004D040F /* gray_dash_40.png */; };
-		1AC3C59E13B30D89004D040F /* gray_dash_40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C54313B30D89004D040F /* gray_dash_40@2x.png */; };
 		1AC3C59F13B30D89004D040F /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C54513B30D89004D040F /* MainWindow_iPad.xib */; };
 		1AC3C5A013B30D89004D040F /* exportphotosAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C54813B30D89004D040F /* exportphotosAppDelegate_iPad.m */; };
 		1AC3C5A113B30D89004D040F /* ExportPhotoViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3C54A13B30D89004D040F /* ExportPhotoViewController_iPad.m */; };
@@ -61,6 +61,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A64F4C713B86A9C00DC0826 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1A64F4C913B86C5400DC0826 /* app_icon_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_placeholder.png; sourceTree = "<group>"; };
+		1A64F4CA13B86C5400DC0826 /* default_transfer_apps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_transfer_apps.json; sourceTree = "<group>"; };
+		1A64F4CB13B86C5400DC0826 /* gray_dash_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_dash_40.png; sourceTree = "<group>"; };
+		1A64F4CC13B86C5400DC0826 /* gray_dash_40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_dash_40@2x.png"; sourceTree = "<group>"; };
+		1A64F4D113B86CC700DC0826 /* CAPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPT.h; sourceTree = "<group>"; };
+		1A64F4D313B8716B00DC0826 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1AC3C4D813B2FBA7004D040F /* exportphotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exportphotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC3C4DE13B2FBA7004D040F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AC3C50313B2FBB1004D040F /* importphotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = importphotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,8 +87,6 @@
 		1AC3C53313B30D2B004D040F /* CAPTTransferPhotoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPTTransferPhotoTableViewController.m; sourceTree = "<group>"; };
 		1AC3C53413B30D2B004D040F /* NSURL+CAPTURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+CAPTURLHelper.h"; sourceTree = "<group>"; };
 		1AC3C53513B30D2B004D040F /* NSURL+CAPTURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CAPTURLHelper.m"; sourceTree = "<group>"; };
-		1AC3C53713B30D89004D040F /* app_icon_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon_placeholder.png; sourceTree = "<group>"; };
-		1AC3C53813B30D89004D040F /* default_transfer_apps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_transfer_apps.json; sourceTree = "<group>"; };
 		1AC3C53A13B30D89004D040F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AC3C53B13B30D89004D040F /* exportphotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "exportphotos-Info.plist"; sourceTree = "<group>"; };
 		1AC3C53C13B30D89004D040F /* exportphotos-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exportphotos-Prefix.pch"; sourceTree = "<group>"; };
@@ -90,8 +95,6 @@
 		1AC3C53F13B30D89004D040F /* ExportPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportPhotoViewController.h; sourceTree = "<group>"; };
 		1AC3C54013B30D89004D040F /* ExportPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportPhotoViewController.m; sourceTree = "<group>"; };
 		1AC3C54113B30D89004D040F /* ExportPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExportPhotoViewController.xib; sourceTree = "<group>"; };
-		1AC3C54213B30D89004D040F /* gray_dash_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_dash_40.png; sourceTree = "<group>"; };
-		1AC3C54313B30D89004D040F /* gray_dash_40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_dash_40@2x.png"; sourceTree = "<group>"; };
 		1AC3C54613B30D89004D040F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		1AC3C54713B30D89004D040F /* exportphotosAppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exportphotosAppDelegate_iPad.h; sourceTree = "<group>"; };
 		1AC3C54813B30D89004D040F /* exportphotosAppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exportphotosAppDelegate_iPad.m; sourceTree = "<group>"; };
@@ -174,6 +177,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A64F4C813B86C5400DC0826 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A64F4C913B86C5400DC0826 /* app_icon_placeholder.png */,
+				1A64F4CA13B86C5400DC0826 /* default_transfer_apps.json */,
+				1A64F4CB13B86C5400DC0826 /* gray_dash_40.png */,
+				1A64F4CC13B86C5400DC0826 /* gray_dash_40@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1AC3C4CB13B2FB8B004D040F = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +223,9 @@
 		1AC3C52513B30D2B004D040F /* source */ = {
 			isa = PBXGroup;
 			children = (
+				1A64F4C713B86A9C00DC0826 /* LICENSE */,
+				1A64F4D313B8716B00DC0826 /* README.md */,
+				1A64F4D113B86CC700DC0826 /* CAPT.h */,
 				1AC3C52613B30D2B004D040F /* CAPTApp+TransferPhoto.h */,
 				1AC3C52713B30D2B004D040F /* CAPTApp+TransferPhoto.m */,
 				1AC3C52813B30D2B004D040F /* CAPTApp.h */,
@@ -225,6 +242,7 @@
 				1AC3C53313B30D2B004D040F /* CAPTTransferPhotoTableViewController.m */,
 				1AC3C53413B30D2B004D040F /* NSURL+CAPTURLHelper.h */,
 				1AC3C53513B30D2B004D040F /* NSURL+CAPTURLHelper.m */,
+				1A64F4C813B86C5400DC0826 /* Resources */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -312,9 +330,6 @@
 		1AC3C5F013B30EC0004D040F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				1AC3C53713B30D89004D040F /* app_icon_placeholder.png */,
-				1AC3C54213B30D89004D040F /* gray_dash_40.png */,
-				1AC3C54313B30D89004D040F /* gray_dash_40@2x.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -322,7 +337,6 @@
 		1AC3C5F113B30ECD004D040F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1AC3C53813B30D89004D040F /* default_transfer_apps.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -450,17 +464,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC3C59613B30D89004D040F /* app_icon_placeholder.png in Resources */,
-				1AC3C59713B30D89004D040F /* default_transfer_apps.json in Resources */,
 				1AC3C59813B30D89004D040F /* InfoPlist.strings in Resources */,
 				1AC3C59913B30D89004D040F /* exportphotos-Info.plist in Resources */,
 				1AC3C59C13B30D89004D040F /* ExportPhotoViewController.xib in Resources */,
-				1AC3C59D13B30D89004D040F /* gray_dash_40.png in Resources */,
-				1AC3C59E13B30D89004D040F /* gray_dash_40@2x.png in Resources */,
 				1AC3C59F13B30D89004D040F /* MainWindow_iPad.xib in Resources */,
 				1AC3C5A213B30D89004D040F /* MainWindow_iPhone.xib in Resources */,
 				1AC3C99D13B31149004D040F /* LICENSE in Resources */,
 				1AC3C99E13B31149004D040F /* README.md in Resources */,
+				1A64F4CD13B86C5400DC0826 /* app_icon_placeholder.png in Resources */,
+				1A64F4CE13B86C5400DC0826 /* default_transfer_apps.json in Resources */,
+				1A64F4CF13B86C5400DC0826 /* gray_dash_40.png in Resources */,
+				1A64F4D013B86C5400DC0826 /* gray_dash_40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

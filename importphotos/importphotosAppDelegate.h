@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CAPTAppDelegate.h"
+#import "CAPT.h"
 
 @class ImportPhotosViewController;
 
