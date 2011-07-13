@@ -173,8 +173,9 @@ UIImage *fixImageWithOrientation(UIImage *image, UIImageOrientation orientation)
         if (image) {
             [userInfo setObject:image forKey:CAPTTransferPhotoImageKey];
         }
-        if (metaData) {
-            [userInfo setObject:metaData forKey:CAPTTransferPhotoMetaKey];
+        if (dict) {
+            // dict is optional provided by the source appliation
+            [userInfo setObject:dict forKey:CAPTTransferPhotoMetaKey];
         }
         
         [self notifyHandlerInMainThreadWithUserInfo:[NSDictionary dictionaryWithDictionary:userInfo]];
