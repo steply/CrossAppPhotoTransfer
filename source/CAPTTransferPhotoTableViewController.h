@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class CAPTAppExportList;
 
 @interface CAPTTransferPhotoTableViewController : UITableViewController {
     UIImage *_image;
     NSDictionary *_metaDict;
     NSArray *_list;
+    CAPTAppExportList *_exportList;
 }
 
 - (id)initWithImage:(UIImage *)image            // Required.

@@ -27,17 +27,24 @@ static char *appKey;
 @implementation CAPTTransferPhotoTableViewController
 @synthesize list = _list;
 
+- (void)_prepareList {
+    [_list release];
+    
+    NSMutableArray *rootList = [_exportList.listAvaliable mutableCopy];
+    [rootList addObject:_exportList.listUnavaliable];
+    _list       = rootList;
+}
+
 - (id)initWithImage:(UIImage *)image meta:(NSDictionary *)metaDict {
-    if ((self == [self initWithStyle:UITableViewStylePlain])) {
+    if (self = [super initWithStyle:UITableViewStylePlain]) {
         _image      = [image retain];
         _metaDict   = [metaDict retain];
 
         // Create a list [app1, app2, unavailableAppArray[]]
-        CAPTAppExportList *exportList = [CAPTAppExportList sharedExportList];
-        NSMutableArray *rootList = [[NSMutableArray alloc] initWithArray:exportList.listAvaliable];
-        [rootList addObject:exportList.listUnavaliable];
-        _list       = [[NSArray alloc] initWithArray:rootList];
-        [rootList release];
+        _exportList = [[CAPTAppExportList sharedExportList] retain];
+        [_exportList addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:&_exportList];
+        [self _prepareList];
+
     }
     return self;
 }
@@ -177,6 +184,7 @@ static char *appKey;
 }
 
 @end
+
 
 
 @implementation URLSchemeExportTableViewCell
