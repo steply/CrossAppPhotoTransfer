@@ -164,8 +164,10 @@ static CAPTAppExportList *_sharedInstance;
 }
 
 - (void)setList:(NSArray *)list {
-    [_list release]; _list = nil;
-    _list = [[NSArray alloc] initWithArray:list];
+    if (_list != list) {
+        [_list release];
+        _list = [list copy];
+    }
 }
 
 - (NSArray *)listAvaliable {
