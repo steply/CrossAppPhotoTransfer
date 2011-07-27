@@ -26,3 +26,7 @@
 - (BOOL)openURLWithPath:(NSString *)path;
 
 @end
+
+#define kCAPTBundleName				@"CAPTResources.bundle"
+
+UIImage *CAPTImageNamed(NSString *filename);

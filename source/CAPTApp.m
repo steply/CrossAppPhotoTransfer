@@ -100,3 +100,7 @@
 }
 
 @end
+
+UIImage *CAPTImageNamed(NSString *filename) {
+	return [UIImage imageNamed:[kCAPTBundleName stringByAppendingPathComponent:filename]];
+}

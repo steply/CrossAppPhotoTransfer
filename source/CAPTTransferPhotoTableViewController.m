@@ -107,12 +107,12 @@ static char *appKey;
         cell.textLabel.text = app.name;
         cell.detailTextLabel.text = app.bio;
         cell.accessoryType = app.storeURL ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
-        [cell.imageView setImageWithURL:app.iconURL placeholderImage:[UIImage imageNamed:@"app_icon_placeholder.png"]];
+        [cell.imageView setImageWithURL:app.iconURL placeholderImage:CAPTImageNamed(@"app_icon_placeholder.png")];
     } else if ([row isKindOfClass:[NSArray class]]) {
         cell.textLabel.text = @"Apps Not Installed";
         cell.detailTextLabel.text = @"Download more apps with photos export.";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.imageView.image = [UIImage imageNamed:@"gray_dash_40.png"];
+        cell.imageView.image = CAPTImageNamed(@"gray_dash_40.png");
     }
     return cell;
 }
@@ -126,6 +126,10 @@ static char *appKey;
 }
 
 #pragma mark UITableViewDelegate
+
+- (CAPTTransferPhotoTableViewController *)newTransferPhotoTableViewController {
+    return [CAPTTransferPhotoTableViewController alloc];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id row = [_list objectAtIndex:indexPath.row];
@@ -148,7 +152,7 @@ static char *appKey;
             [alertView release];
         }
     } else if ([row isKindOfClass:[NSArray class]]) {
-        CAPTTransferPhotoTableViewController *controller = [[CAPTTransferPhotoTableViewController alloc] initWithArray:(NSArray *)row image:_image meta:_metaDict];
+        CAPTTransferPhotoTableViewController *controller = [[self newTransferPhotoTableViewController] initWithArray:(NSArray *)row image:_image meta:_metaDict];
         controller.title = @"Not Installed";
         [self.navigationController pushViewController:controller animated:YES];
         [controller release];

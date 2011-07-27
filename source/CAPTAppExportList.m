@@ -203,7 +203,7 @@ static CAPTAppExportList *_sharedInstance;
     if ( ! _list) {
         @try {
             // Incase the offline cache is totally different
-            NSString *defaultListPath = [[NSBundle mainBundle] pathForResource:@"default_transfer_apps.json" ofType:nil];
+            NSString *defaultListPath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kCAPTBundleName] stringByAppendingPathComponent:@"default_transfer_apps.json"];
             NSError *error = nil;
             NSString *data = [[NSString alloc] initWithContentsOfFile:defaultListPath encoding:NSUTF8StringEncoding error:&error];
             NSAssert( ! error, @"unable to read or locate default_transfer_apps.json");
