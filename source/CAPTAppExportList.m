@@ -147,19 +147,6 @@ static CAPTAppExportList *_sharedInstance;
 }
 
 - (NSArray *)list {
-    if ( ! _list) {
-        NSString *json = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-        NSArray *jsonArray = [json JSONValue];
-        NSMutableArray *appList = [[NSMutableArray alloc] init];
-        for (NSDictionary *dict in jsonArray) {
-            CAPTApp *app = [[CAPTApp alloc] initWithDictionary:dict];
-            [appList addObject:app];
-            [app release];
-        }
-        [json release];
-        _list = [[NSArray alloc] initWithArray:appList];
-        [appList release];
-    }
     return _list;
 }
 
@@ -245,6 +232,19 @@ static CAPTAppExportList *_sharedInstance;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [self clearCache];
+    
+    // Parse data
+    NSString *json = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+    NSArray *jsonArray = [json JSONValue];
+    NSMutableArray *appList = [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in jsonArray) {
+        CAPTApp *app = [[CAPTApp alloc] initWithDictionary:dict];
+        [appList addObject:app];
+        [app release];
+    }
+    [json release];
+    _list = appList;
+
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.list];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:USER_DEFAULTS_LIST_KEY];
     NSLog(@"Finished Loading! %@", self.list);
