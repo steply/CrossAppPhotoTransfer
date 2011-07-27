@@ -53,6 +53,11 @@ static char *appKey;
 
 - (void)dealloc
 {
+    if (_exportList) {
+        [_exportList removeObserver:self forKeyPath:@"state"];
+        [_exportList release];
+    }
+    
     [_list release];
     [_image release]; 
     [_metaDict release];
@@ -160,6 +165,15 @@ static char *appKey;
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
+#pragma mark KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (context == &_exportList) {
+        [self _prepareList];
+        [self.tableView reloadData];
+    }
 }
 
 @end
