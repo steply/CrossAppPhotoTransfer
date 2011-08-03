@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CAPT.h"
 
-@interface ImportPhotosViewController : UIViewController <CAPTHandlerDelegate> {
+@interface ImportPhotosViewController : UIViewController {
     
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UITextView  *statusLabel;
+
+- (void)didSucceedProcessingURLActionWithUserInfo:(NSDictionary *)userInfo;
+- (void)willStartProcessingURLAction:(NSString *)action;
 
 @end

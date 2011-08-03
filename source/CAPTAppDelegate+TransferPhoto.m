@@ -6,6 +6,7 @@
 //  Copyright 2011 Stepcase. All rights reserved.
 //
 
+#import "CAPTApp+TransferPhoto.h"
 #import "CAPTAppDelegate+TransferPhoto.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "NSURL+CAPTURLHelper.h"

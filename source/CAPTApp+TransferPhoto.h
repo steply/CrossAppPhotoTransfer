@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "CAPTApp.h"
 
+// NB: Better not to change the string because once defined, modifying will break previous support
+#define CAPTTransferPhotoAction   @"transfer_photo"
+#define CAPTTransferPhotoImageKey @"URLSchemeTransferPhotoImageKey"
+#define CAPTTransferPhotoMetaKey  @"URLSchemeTransferPhotoMetaKey"
+
 @interface CAPTApp (TransferPhoto)
 
 - (void)transferPhotoWithImage:(UIImage *)image             // Required

@@ -7,8 +7,8 @@
 //
 
 #import "CAPTApp+TransferPhoto.h"
+#import "CAPTAppDelegate+TransferPhoto.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-#import "CAPTHandler+TransferPhoto.h"
 
 @interface CAPTApp (TransferPhotoPrivate)
 

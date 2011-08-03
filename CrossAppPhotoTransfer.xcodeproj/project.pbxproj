@@ -74,8 +74,6 @@
 		1AC3C52D13B30D2B004D040F /* CAPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPTAppDelegate.m; sourceTree = "<group>"; };
 		1AC3C52E13B30D2B004D040F /* CAPTAppExportList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPTAppExportList.h; sourceTree = "<group>"; };
 		1AC3C52F13B30D2B004D040F /* CAPTAppExportList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPTAppExportList.m; sourceTree = "<group>"; };
-		1AC3C53013B30D2B004D040F /* CAPTHandler+TransferPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAPTHandler+TransferPhoto.h"; sourceTree = "<group>"; };
-		1AC3C53113B30D2B004D040F /* CAPTHandlerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPTHandlerDelegate.h; sourceTree = "<group>"; };
 		1AC3C53213B30D2B004D040F /* CAPTTransferPhotoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPTTransferPhotoTableViewController.h; sourceTree = "<group>"; };
 		1AC3C53313B30D2B004D040F /* CAPTTransferPhotoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPTTransferPhotoTableViewController.m; sourceTree = "<group>"; };
 		1AC3C53413B30D2B004D040F /* NSURL+CAPTURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+CAPTURLHelper.h"; sourceTree = "<group>"; };
@@ -218,8 +216,6 @@
 				1AC3C52D13B30D2B004D040F /* CAPTAppDelegate.m */,
 				1AC3C52E13B30D2B004D040F /* CAPTAppExportList.h */,
 				1AC3C52F13B30D2B004D040F /* CAPTAppExportList.m */,
-				1AC3C53013B30D2B004D040F /* CAPTHandler+TransferPhoto.h */,
-				1AC3C53113B30D2B004D040F /* CAPTHandlerDelegate.h */,
 				1AC3C53213B30D2B004D040F /* CAPTTransferPhotoTableViewController.h */,
 				1AC3C53313B30D2B004D040F /* CAPTTransferPhotoTableViewController.m */,
 				1AC3C53413B30D2B004D040F /* NSURL+CAPTURLHelper.h */,

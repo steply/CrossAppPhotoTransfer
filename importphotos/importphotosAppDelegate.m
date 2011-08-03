@@ -70,8 +70,12 @@
     [super dealloc];
 }
 
-- (id <CAPTHandlerDelegate>)delegate {
-    return _controller;
+- (void)didSucceedProcessingURLActionWithUserInfo:(NSDictionary *)userInfo {
+    [_controller didSucceedProcessingURLActionWithUserInfo:userInfo];
+}
+
+- (void)willStartProcessingURLAction:(NSString *)action {
+    [_controller willStartProcessingURLAction:action];
 }
 
 @end
