@@ -10,8 +10,6 @@
 #import "CAPTApp.h"
 
 // Import
-#import "CAPTHandler+TransferPhoto.h"
-#import "CAPTHandlerDelegate.h"
 #import "CAPTAppDelegate+TransferPhoto.h"
 
 // Export

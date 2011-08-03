@@ -8,7 +8,6 @@
 
 #import "CAPTAppDelegate+TransferPhoto.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-#import "CAPTHandler+TransferPhoto.h"
 #import "NSURL+CAPTURLHelper.h"
 
 

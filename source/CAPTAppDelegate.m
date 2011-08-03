@@ -13,7 +13,6 @@ NSString const *CAPTActionKey             = @"URLSchemeActionKey";
 NSString const *CAPTURLKey                = @"CAPTURLKey";
 
 @implementation CAPTAppDelegate
-@synthesize delegate = _delegate;
 
 - (BOOL)handleURL:(NSURL *)url {
     NSString *action = [url host];
@@ -22,7 +21,7 @@ NSString const *CAPTURLKey                = @"CAPTURLKey";
         NSString *selectorString = [NSString stringWithFormat:@"%@_urlhandler:", action];
         SEL selector = NSSelectorFromString(selectorString);
         if ([self respondsToSelector:selector]) {
-            [self.delegate willStartProcessingURLAction:action];
+            [self willStartProcessingURLAction:action];
             [self performSelectorInBackground:selector withObject:url];
             return YES;
         } else {
@@ -52,12 +51,19 @@ NSString const *CAPTURLKey                = @"CAPTURLKey";
 }
 
 - (void)notifyHandlerWithUserInfo:(NSDictionary *)dict {
-    NSParameterAssert(self.delegate != nil);
-    [self.delegate didSucceedProcessingURLActionWithUserInfo:dict];
+    [self didSucceedProcessingURLActionWithUserInfo:dict];
 }
 
 - (void)notifyHandlerInMainThreadWithUserInfo:(NSDictionary *)userInfo {
     [self performSelectorOnMainThread:@selector(notifyHandlerWithUserInfo:) withObject:userInfo waitUntilDone:YES];
+}
+
+- (void)willStartProcessingURLAction:(NSString *)action { 
+    // Do nothing. To be handled by subclass
+}
+    
+- (void)didSucceedProcessingURLActionWithUserInfo:(NSDictionary *)userInfo {
+    // Do nothing. To be handled by subclass
 }
 
 @end
