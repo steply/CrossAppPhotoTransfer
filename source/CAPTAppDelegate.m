@@ -31,13 +31,22 @@ NSString const *CAPTURLKey                = @"CAPTURLKey";
     return NO;
 }
 
+// See http://stackoverflow.com/questions/3339722/check-iphone-ios-version
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
 // iOS 3.x
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
-    if ( ! url) {
-        return YES; // If no url, it's a clean launch, return YES
+    
+    // Only handle on iOS 3.x
+    if (SYSTEM_VERSION_LESS_THAN(@"4.0")) {
+        NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+        if (url) {
+            return [self handleURL:url];
+        }
     }
-    return [self handleURL:url];
+    
+    // no URL to handle
+    return YES;
 }
 
 // iOS 4.1 or below
