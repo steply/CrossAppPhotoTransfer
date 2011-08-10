@@ -112,7 +112,7 @@ static char *appKey;
         cell.textLabel.text = @"Apps Not Installed";
         cell.detailTextLabel.text = @"Download more apps with photos export.";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.imageView.image = CAPTImageNamed(@"gray_dash_40.png");
+        cell.imageView.image = CAPTImageNamed(@"add_app.png");
     }
     return cell;
 }
