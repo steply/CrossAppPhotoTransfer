@@ -79,6 +79,23 @@
     return [_jsonValue valueForKeyPath:@"bio"];
 }
 
+static NSMutableSet *appSchemes = nil;
+- (BOOL)isMe {
+    if (!appSchemes) {
+        appSchemes = [[NSMutableSet alloc] init];
+        for (NSDictionary *info in [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"]) {
+            NSArray *schemes = [info objectForKey:@"CFBundleURLSchemes"];
+            for (NSString *s in schemes) {
+                if ([s isKindOfClass:[NSString class]] && s.length > 0) {
+                    [appSchemes addObject:s];
+                }
+            }
+        }
+    }
+    NSString *s = [self scheme];
+    return [appSchemes containsObject:s];
+}
+
 #pragma mark -
 
 - (BOOL)isInstalled {

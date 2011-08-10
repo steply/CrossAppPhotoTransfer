@@ -23,6 +23,7 @@
 + (CAPTApp *)sampleAppForImportPhotos;
 - (CAPTApp *)initWithDictionary:(NSDictionary *)jsonValue;
 - (BOOL)isInstalled;
+- (BOOL)isMe;
 - (BOOL)openURLWithPath:(NSString *)path;
 
 @end

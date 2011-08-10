@@ -212,7 +212,9 @@ static CAPTAppExportList *_sharedInstance;
             NSMutableArray *list = [[NSMutableArray alloc] init];
             for (NSDictionary *appDict in [data JSONValue]) {
                 CAPTApp *app = [[CAPTApp alloc] initWithDictionary:appDict];
-                [list addObject:app];
+                if (![app isMe]) {
+                    [list addObject:app];
+                }
                 [app release];
             }
             _list = [[NSArray alloc] initWithArray:list];
@@ -239,7 +241,9 @@ static CAPTAppExportList *_sharedInstance;
     NSMutableArray *appList = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in jsonArray) {
         CAPTApp *app = [[CAPTApp alloc] initWithDictionary:dict];
-        [appList addObject:app];
+        if (![app isMe]) {
+            [appList addObject:app];
+        }
         [app release];
     }
     [json release];
