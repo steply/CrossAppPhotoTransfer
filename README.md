@@ -43,8 +43,7 @@ They are already specified in the .gitmodules. and you can checkout by running t
 	$ git submodules init
 	$ git submodules update
 
-
-After all, you just drag everything in the source folder into your project and includes the "CAPT.h" header file to get started.
+After all, you just drag everything (including the CAPTResources.bundle) in the source folder into your project and #import "CAPT.h" header file to get started.
 
 How To Export Photos
 =
@@ -92,7 +91,7 @@ How to import Photos
 Configure your app-info.plist
 Setup your app-info.plist to let iOS know which URL schemes your app can handle. Replace the necessary information with your own app’s info. Below is a sample of our Labelbox app.
 
-[![](http://steply.github.com/images/capt/screen_shot_1.png)](http://steply.github.com/images/capt/screen_shot_1.png)
+[![](http://capt.me/images/capt/screen_shot_1.png)](http://capt.me/images/capt/screen_shot_1.png)
 
 Configure your application delegate
 -
@@ -118,27 +117,37 @@ Open up your applicationDelegate.h. Extend your delegate from NSObject to CAPTAp
 		return [super application:application:application didFinishLaunchingWithOptions:launchOptions];
 	}
 	*/
-	- (id <CAPTHandlerDelegate>)delegate {
-		// Basically should be your root view controller or a singleton object which never releases.
-		return self.controller;
+
+	#pragma mark CAPTAppDelegate
+	// Basically should be your root view controller or a singleton object which never releases.
+	- (void)willStartProcessingURLAction:(NSString *)action {
+		[self.controller willStartProcessingURLAction:action];
+	}
+
+	- (void)didSucceedProcessingURLActionWithUserInfo:(NSDictionary *)userInfo {
+		[self.controller didSucceedProcessingURLActionWithUserInfo:userInfo];
 	}
 
 	@end
-
 
 Configure your rootViewController
 -
 Open up your RootViewController.h and .m.
 
 	#pragma mark RootViewController.h
-	#import "CAPT.h"
 
 	@interface RootViewController : UIViewController <CAPTHandlerDelegate> {
 	}
+
+	// The methods you would call CAPT in your app delegate
+	- (void)willStartProcessingURLAction:(NSString *)action;
+	- (void)didSucceedProcessingURLActionWithUserInfo:(NSDictionary *)userInfo;
+
 	@end
 
 
 	#pragma mark RootViewController.m
+	#import "CAPT.h"
 
 	@implementation RootViewController
 	- (void)willStartProcessingURLAction:(NSString *)action {
