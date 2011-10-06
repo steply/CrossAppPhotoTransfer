@@ -145,12 +145,17 @@ UIImage *fixImageWithOrientation(UIImage *image, UIImageOrientation orientation)
         }
         
         UIImage *image = [UIImage imageWithData:[pasteboard dataForPasteboardType:(NSString *)kUTTypeImage]];
-        NSString *metaData = nil;
+        //NSString *metaData = nil;
         NSDictionary *dict = nil;
         // Prevent crash when meta data dict is not avaliable
         if ([pasteboard containsPasteboardTypes:[NSArray arrayWithObject:(NSString *)kUTTypeText]]) {
-            metaData = [NSString stringWithUTF8String:[(NSData *)[pasteboard valueForPasteboardType:(NSString *)kUTTypeText] bytes]];
-            dict = [metaData propertyListFromStringsFileFormat];
+            id value = [pasteboard valueForPasteboardType:(NSString *)kUTTypeText];
+            if ([value isKindOfClass:[NSString class]]) {
+                dict = [value propertyListFromStringsFileFormat];
+            }
+            else if ([value isKindOfClass:[NSData class]]) {
+                dict = [[NSString stringWithUTF8String:[value bytes]] propertyListFromStringsFileFormat];
+            }
         }
         
 //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@", pasteboardName] message:[NSString stringWithFormat:@"%d, %@, meta %@", [pasteboard numberOfItems], image, metaData] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
