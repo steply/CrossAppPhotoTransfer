@@ -9,6 +9,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "ExportPhotoViewController.h"
 #import "CAPT.h"
+#import "CAPTAppExportTestingList.h"
 
 @interface ExportPhotoViewController ()
 @property (nonatomic, retain) NSDictionary *metaData;
@@ -159,7 +160,7 @@
 #pragma mark Properties
 
 - (CAPTAppExportList *)list {
-    return [CAPTAppExportList sharedExportList];
+    return [CAPTAppExportTestingList sharedExportList];
 }
 
 - (UIBarButtonItem *)reloadButton {
